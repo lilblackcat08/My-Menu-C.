@@ -1,0 +1,71 @@
+comprog
+
+#include <stdio.h>
+
+int main(){
+    int code,quantity;
+    float price, amount, totalAmount, cash, change;
+    char name,addAnother;
+    
+        printf("============================================\n");
+        printf("\t\t\t\tCoFFee Menu\n");
+        printf("============================================\n");
+        printf(" Code\t\t  Coffee\t\t\t  Price\n");
+        printf("  1\t\t\tCappuccino\t\t\tPhp 39.00\n");
+        printf("  2\t\t\tMocha\t\t\t\tPhp 40.00\n");
+        printf("  3\t\t\tIrish\t\t\t\tPhp 39.00\n");
+        printf("  4\t\t\tEspresso\t\t\tPhp 38.00\n");
+        printf("  5\t\t\tMacchaito\t\t\tPhp 39.00\n");
+        printf("  6\t\t\tIced Coffee\t\t\tPhp 35.00\n");
+    
+    do{
+        printf("============================================\n");
+        
+        printf("Enter Code:");
+        scanf("%d", &code);
+        printf("\n\nEnter Quantity:");
+        scanf("%d", &quantity);
+        
+        switch(code){
+            case 1: printf("Coffee: Cappucino");
+                    price = 39.00;
+                    break;
+            case 2: printf("Coffee: Mocha");
+                    price = 40.00;
+                    break;
+            case 3: printf("Coffee: Irish");
+                    price = 39.00;
+                    break;
+            case 4: printf("Coffee: Espresso");
+                    price = 38.00;
+                    break;
+            case 5: printf("Coffee: Macchaito");
+                    price = 39.00;
+                    break;
+            case 6: printf("Coffee: Iced Coffee");
+                    price = 35.00;
+                    break;
+           
+         }
+         
+         amount = price * quantity;
+         printf("\nPrice: %.2f", price);
+         
+         totalAmount = totalAmount + amount;
+         printf("\nTotal Amount: %.2f", totalAmount);
+         
+         printf("\nCash:");
+         scanf("%f", &cash);
+         
+         change = totalAmount - cash;
+         printf("\nChange: %.1f", change);
+         
+         printf("\nDo you want to add another order?(Y/N)\n");
+         scanf(" %c", &addAnother);
+         
+    }while(addAnother == 'Y' || addAnother == 'y');
+        printf("============================================\n");
+        printf("\t\tThank you! Please come again!!\n");
+        printf("============================================\n");
+    
+}
